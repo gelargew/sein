@@ -4,44 +4,104 @@
     display: flex;
     place-items: center;
     flex-direction: column;
-    padding-top: 30vh;
+}
+
+.header {
+    background: black;
+    width: 100%;
+    min-height: 60vh;
+    position: relative;
+    z-index: 5;
+}
+
+.header_content {
+    position: absolute;
+    bottom: 0;
+    left: var(--offsetX-large);
+    width: 766px;
+}
+
+.header_content h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: var(--font-xxlarge);
+    margin-bottom: 2rem;
+    font-weight: 100;
+    color: rgb(235, 235, 235);
+}
+
+
+
+.wall_mid, .wall_left, .wall_right, .wall_top {
+    background: rgb(0, 0, 0);
+    z-index: 4;
+}
+
+.wall_top {
+    grid-area: top;
+    height: 50vh;
+    z-index: -1;
+}
+
+.wall_mid {
+    grid-area: mid;
+}
+
+.wall_left {
+    grid-area: left;
+}
+
+.wall_right {
+    grid-area: right;
 }
 
 .content {
-    min-height: 100vh;
-    height: fit-content;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-}
-
-.contentGap {
-    background: #000;
-    width: 4rem;
-}
-
-.content_left, .content_right {
-
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-}
-
-.content_left>div, .content_right>div {
+    z-index: 1;
     width: 100%;
-    padding: 5rem 0;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 15vw 1fr 5rem 1fr 15vw;
+    grid-template-rows: 20vh auto;
+    grid-template-areas: 
+    "left content1 mid top right"
+    "left content1 mid content2 right"
+    ;
+    overflow: hidden;
 }
 
 
-
-.hole1 {
-    height: 300px;
-}
-
-.content1 {
+.content video {
+    width: 100%;
     background: black;
-
+    padding: 5rem 0;
+    font-size: 0;
+    display: block;
 }
+
+.content_text {
+    background: #000;
+    padding-bottom: 25rem;
+    width: 100%;
+}
+
+
+.content_text_2 {
+    margin-top: 500px;
+}
+
+
+
+.content_left {
+    grid-area: content1;
+}
+
+.content_right {
+    top: 20vh;
+    grid-area: content2;
+    overflow: hidden;
+    height: 100%;
+}
+
+
 
 
 

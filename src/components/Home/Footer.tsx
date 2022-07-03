@@ -1,10 +1,10 @@
 import styles from './styles/footer.module.css'
 
 
-export default function Footer() {
+export default function Footer(props: JSX.IntrinsicElements['div']) {
 
     return (
-        <section   className={styles.footer} >
+        <section   className={styles.footer} {...props} >
             <div onClick={() => console.log('asdsd')} className={styles.ftr_content} >
                 <h2 >website by: <a href='https://gelar.dev/' target='_blank' rel='noreferrer' >gelar.dev</a></h2>
 
