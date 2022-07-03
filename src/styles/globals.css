@@ -1,0 +1,45 @@
+:root {
+  --offsetX-large: 25vw;
+  --offsetX-medium: 20vw;
+  --offsetX-small: 10vw;
+  --offsetY-large: 25vh;
+  --offsetY-medium: 15vh;
+  --offsetY-small: 10vh;
+  --font_xxlarge: 75px;
+  --font_large: 48px;
+  --text-hero-weight: 100;
+}
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background: #000;
+  color: white;
+  font-weight: 100;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover, button:hover {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
+  font-weight: 100;
+}
+
+main {
+  height: 100vh;
+}

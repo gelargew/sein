@@ -1,0 +1,155 @@
+.heroLayout {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    overflow: hidden;
+    place-items: center;
+}
+
+.heroNav {
+    position: absolute;
+    bottom: 10%;
+    right: 20%;
+}
+
+.heroSection {
+    position: relative;
+    min-width: 100%;
+    height: 100%;
+    background: rgb(5, 23, 46);
+
+}
+
+.heroText {
+    position: absolute;
+    top: 35%;
+    left: 25vw;
+    font-size: var(--font_xxlarge);
+    font-weight: 100;
+    line-height: 1.1;
+    max-width: 70%;
+}
+
+
+.heroSectionNumber {
+    position: absolute;
+    top: 34%;
+    left: 15vw;
+}
+
+.heroSectionFooter {
+    position: absolute;
+    bottom: 10%;
+    left: 25vw;
+}
+
+
+
+
+
+/* SECTION 2 (EXPERTISE)*/
+
+.expertise {
+    padding: 5rem 0;
+    background: black;
+    position: relative;
+    min-height: 90vh;
+}
+
+.exp_s1 {
+    display: flex;
+    place-items: flex-end;
+    margin: var(--offsetY-medium) var(--offsetX-medium);
+    gap: 5rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.exp_s1_head {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    max-width: 70%;
+}
+
+.exp_s1_head>p {
+    font-size: var(--font_large);
+    font-weight: var(--text-hero-weight);
+
+}
+
+.exp_s2 {
+    overflow: visible;
+    width: 100vw;
+}
+
+
+
+/* SECTION 3 (GLASS) */
+
+.glass {
+    height: 100vh;
+    background: none;
+    mix-blend-mode: difference;
+}
+
+.glass h4 {
+    padding-top: 20%;
+    margin-left: var(--offsetX-medium);
+    padding-bottom: 5rem;
+    mix-blend-mode: difference;
+    background: none;
+}
+
+.glass p {
+    margin-left: var(--offsetX-medium);
+    font-size: var(--font_large);
+    width: 50%;
+}
+
+
+
+
+/* SECTION 4 SLIDER */
+
+.slider {
+    padding: 5vw var(--offsetX-medium);
+    width: fit-content;
+    display: flex;
+    gap: 5rem;
+    user-select: none;
+    cursor: col-resize;
+}
+
+.slider_text {
+    width: 80%;
+    padding-left: 5vw;
+    position: relative;
+    cursor: pointer;
+}
+
+.slider_text>h3 {
+    font-size: 40px;
+    margin-bottom: 2rem;
+}
+
+.slider_text .slider_number {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+}
+
+
+
+
+
+.slider_img {
+    object-fit: cover;
+    width: 35vw;
+    height: 400px;
+    touch-action: none;
+    pointer-events: none;
+    z-index: -1;
+    margin-bottom: 4rem;
+}
