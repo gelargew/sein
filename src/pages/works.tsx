@@ -4,7 +4,7 @@ import { useAtom } from "jotai";
 import { isLoadingPage, LoadingEffect } from "../store";
 
 export default function Works() {
-    const [isLoading, setIsLoading] = useAtom(isLoadingPage)
+    const [isLoading,] = useAtom(isLoadingPage)
 
 
     return (
