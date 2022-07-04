@@ -77,3 +77,14 @@ main.hidden {
 .hidden {
   opacity: 0;
 }
+
+
+::-webkit-scrollbar {
+  width: 5px;
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(151, 151, 151);
+  width: 3px;
+}
