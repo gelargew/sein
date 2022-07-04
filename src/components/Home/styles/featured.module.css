@@ -38,6 +38,7 @@
     bottom: -50%;
     height: 75vh;
     left: 0;
+    overflow: hidden;
     
 }
 
