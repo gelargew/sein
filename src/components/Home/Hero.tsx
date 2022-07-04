@@ -88,7 +88,7 @@ const Expertise = () => {
 
             <section className={styles.exp_s2}>
                 <Slider className={styles.slider} >
-                    {itemData.map(data => <Item data={data} />)}
+                    {itemData.map(data => <Item key={data.title} data={data} />)}
                 </Slider>
             </section>
 

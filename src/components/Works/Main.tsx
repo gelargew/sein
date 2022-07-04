@@ -52,7 +52,7 @@ const ContentLeft = () => {
             
             <div className={`${styles.content_text} ${styles.content_text_2}`} >
                 <h4>hello Ipsum</h4>
-                <p>It is also worth noting that the reason for the so called "space" below or above in some inline video is because of the line-height that is defined on the container</p>
+                <p>It is also worth noting that the reason for the so called &qout;space&quot; below or above in some inline video is because of the line-height that is defined on the container</p>
             </div>  
 
             <video className={styles.video2} src='/videos/dance.mp4' loop muted autoPlay />
@@ -64,7 +64,7 @@ const ContentLeft = () => {
 
             <div className={`${styles.content_text} ${styles.content_text_2}`} >
                 <h4>hello Ipsum</h4>
-                <p>It is also worth noting that the reason for the so called "space" below or above in some inline video is because of the line-height that is defined on the container</p>
+                <p>It is also worth noting that the reason for the so called &qout;space&quot; below or above in some inline video is because of the line-height that is defined on the container</p>
             </div>  
         </div>
     )
@@ -99,7 +99,7 @@ const ContentRight = () => {
             
             <div className={`${styles.content_text} ${styles.content_text_2}`} >
                 <h4>hello Ipsum</h4>
-                <p>It is also worth noting that the reason for the so called "space" below or above in some inline video is because of the line-height that is defined on the container</p>
+                <p>It is also worth noting that the reason for the so called &qout;space&quot; below or above in some inline video is because of the line-height that is defined on the container</p>
             </div>  
 
             <video className={styles.video2} src='/videos/dance.mp4' loop muted autoPlay />
