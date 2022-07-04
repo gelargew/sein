@@ -7,7 +7,7 @@ import styles from './layout.module.css'
 import Pointer from './Pointer'
 
 export default function Layout(props: JSX.IntrinsicElements['div']) {
-    const [,toggleMenu] = useAtom(isMenuActive)
+    const [menuActive,toggleMenu] = useAtom(isMenuActive)
     const [, setIsLoading] = useAtom(isLoadingPage)
 
 
@@ -21,7 +21,7 @@ export default function Layout(props: JSX.IntrinsicElements['div']) {
             <Pointer />
             <div className={styles.mainLayout} >
                 <MenuButton className={styles.menuButton} onClick={() => toggleMenu(prev => !prev)} />
-                <TopNav />
+                <TopNav active={!menuActive} />
             </div>
             <Menu />
             {props.children}
@@ -32,7 +32,7 @@ export default function Layout(props: JSX.IntrinsicElements['div']) {
 
 
 
-const TopNav = () => {
+const TopNav = ({active=true}) => {
     const [isHidden, setIsHidden] = useState(false)
     const onwheel = (e: WheelEvent) => {
         if (e.deltaY > 0) setIsHidden(true)
@@ -45,7 +45,7 @@ const TopNav = () => {
     }, [])
 
     return (
-        <nav className={isHidden ? `${styles.nav_main} hidden` : `${styles.nav_main}`} >
+        <nav className={isHidden || !active ? `${styles.nav_main} hidden` : `${styles.nav_main}`} >
             <Link href={'/'}  ><h2>sein.</h2></Link>
             <Link href='/works' >WORKS</Link>
         </nav>
