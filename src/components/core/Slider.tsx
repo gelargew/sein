@@ -11,6 +11,7 @@ interface SliderProps extends React.HTMLProps<HTMLDivElement> {
 export const Slider = ({minX=0, maxX=1000, ...props}: SliderProps) => {
     const [{x}, api] = useSpring(() => ({ x: 0 }))
 
+
     const bind = useDrag(({down, movement: [mx]}) => {     
         if (down) {
             const elX = x.get()
@@ -21,7 +22,7 @@ export const Slider = ({minX=0, maxX=1000, ...props}: SliderProps) => {
 
 
     return (
-        <a.div  {...bind()} style={{x, touchAction: 'none'}} className={props.className} >
+        <a.div  {...bind()} style={{x}} className={props.className} >
             {props.children}
         </a.div>
     )

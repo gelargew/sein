@@ -15,7 +15,7 @@ export default function WorksPage() {
             <color attach='background' args={['#000000']} />       
             <pointLight intensity={4} position={[5, 10, 10]} />
             <Suspense fallback={null}>
-                <ScrollControls pages={5.8}>
+                <ScrollControls pages={5.4}>
         
                     <Scroll html>
                         <Main />

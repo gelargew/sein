@@ -1,6 +1,9 @@
 import styles from './styles/hero.module.css'
 import { a } from 'react-spring'
 import { Slider } from '../core/Slider'
+import { useMove } from '@use-gesture/react'
+import { useAtom } from 'jotai'
+import { pointerState, pointerText, setPointer } from '../../store'
 
 
 
@@ -44,11 +47,7 @@ const TheHero = () => {
                 </nav>
 
             </section>
-
-
-
         </>
-
     )
 }
 
@@ -74,6 +73,14 @@ const itemData = [
 
 
 const Expertise = () => {
+    const [, setPointerState] = useAtom(setPointer)
+
+    const onEnter = () => {
+        setPointerState({focus: false, active: true, background: 'none', color: '#FFFFFF', text: 'Drag'})
+    }
+    const onOut = () => {
+        setPointerState({active: false, text: 'Sein'})
+    }
 
 
     return (
@@ -86,7 +93,7 @@ const Expertise = () => {
                 <a>what we do →</a>
             </section>
 
-            <section className={styles.exp_s2}>
+            <section className={styles.exp_s2} onPointerEnter={onEnter} onPointerLeave={onOut}>
                 <Slider className={styles.slider} >
                     {itemData.map(data => <Item key={data.title} data={data} />)}
                 </Slider>
@@ -97,8 +104,8 @@ const Expertise = () => {
 }
 
 
-const Item = ({ data }: { data: typeof itemData[0]}) => {
 
+const Item = ({ data }: { data: typeof itemData[0]}) => {
 
     return (
         <div className={styles.slider_item} >
@@ -116,9 +123,17 @@ const Item = ({ data }: { data: typeof itemData[0]}) => {
 
 
 const GlassSection = () => {
+    const [, setPointerState] = useAtom(setPointer)
 
+    const onEnter = () => {
+        setPointerState({focus: false, active: true, background: 'white', color: '#000000', text: 'About'})
+    }
+    const onOut = () => {
+        setPointerState({active: false, text: 'Sein'})
+    }
+    
     return (
-        <section className={styles.glass} >
+        <section className={styles.glass} onPointerEnter={onEnter} onPointerLeave={onOut} >
             <h4>/ WHAT</h4>
             <p>Genitive singular form of sei. Instructive plural form of sei. NounEdit. sein. Instructive plural form of see.</p>
         </section>

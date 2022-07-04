@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { useEffect, useMemo } from 'react'
 import { isLoadingPage, isMenuActive, LoadingEffect } from '../../store'
 import styles from './layout.module.css'
+import Pointer from './Pointer'
 
 export default function Layout(props: JSX.IntrinsicElements['div']) {
     const [,toggleMenu] = useAtom(isMenuActive)
@@ -15,6 +16,7 @@ export default function Layout(props: JSX.IntrinsicElements['div']) {
     return (
         <>
             <LoadingEffect />
+            <Pointer />
             <div className={styles.mainLayout} >
                 <MenuButton className={styles.menuButton} onClick={() => toggleMenu(prev => !prev)} />
             </div>

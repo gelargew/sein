@@ -119,6 +119,7 @@
     display: flex;
     gap: 5rem;
     user-select: none;
+    touch-action: none;
     cursor: col-resize;
 }
 
@@ -140,10 +141,6 @@
     left: 0;
 }
 
-
-
-
-
 .slider_img {
     object-fit: cover;
     width: 35vw;
@@ -152,4 +149,12 @@
     pointer-events: none;
     z-index: -1;
     margin-bottom: 4rem;
+}
+
+
+
+@media (max-width: 769px) {
+    .slider {
+        pointer-events: none;
+    }
 }

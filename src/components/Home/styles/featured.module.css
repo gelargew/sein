@@ -71,7 +71,26 @@
     grid-template-columns: 2fr 4fr 4fr 2fr;
     width: 60vw;
     gap: 4rem;
+    position: relative;
+    padding-bottom: 5rem;
+}
 
+.anchorline {
+    height: 2px;
+    width: 100%;
+    background: white;
+    opacity: 0.2;
+    transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    position: absolute;
+    bottom: 3rem;
+}
+
+.ftd_stories li:hover {
+    cursor: pointer;
+}
+
+.ftd_stories li:hover>.anchorline {
+    opacity: 1;
 }
 
 .ftd_stories h4 {

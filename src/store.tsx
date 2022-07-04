@@ -6,6 +6,21 @@ import { useEffect, useLayoutEffect } from "react";
 
 export const isMenuActive = atom(false)
 export const isLoadingPage = atom(true)
+export const pointerState = atom({
+    focus: false,
+    background: 'none',
+    color: '#000000',
+    active: false
+})
+export const pointerText = atom('POINTER')
+
+export const setPointer = atom(
+    (get) => null,
+    (get, set, {focus=false, background='none', color='#000000', active= false, text= 'Click'}) => {
+        set(pointerState, {focus, background, color, active})
+        set(pointerText, text)
+    }
+)
 
 
 let timer: NodeJS.Timeout;

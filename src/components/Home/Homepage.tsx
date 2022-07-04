@@ -15,7 +15,7 @@ export default function Homepage() {
             <pointLight intensity={4} position={[5, 10, 10]} />
             <Suspense fallback={null}>
 
-                <ScrollControls pages={6.6}>
+                <ScrollControls pages={6.7}>
 
                     <Scroll html>
                         <Hero />
