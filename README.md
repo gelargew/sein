@@ -1,5 +1,5 @@
 ## todo
 
-- custom raycaster shader
-- onPointer image
-- pointer Layout
+- raycaster object with shader
+- floating image with shader effect
+- more detailed animation/transition
