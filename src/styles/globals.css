@@ -1,4 +1,5 @@
 :root {
+  --offsetX-xlarge: 30vw;
   --offsetX-large: 25vw;
   --offsetX-medium: 20vw;
   --offsetX-small: 10vw;
@@ -27,12 +28,24 @@ a {
   text-decoration: none;
 }
 
+button {
+  background: none;
+  outline: none;
+  border: none;
+  color: white;
+}
+
 a:hover, button:hover {
   cursor: pointer;
 }
 
 * {
   box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
 }
 
 h1,h2,h3,h4,h5,h6,p {
@@ -42,4 +55,20 @@ h1,h2,h3,h4,h5,h6,p {
 
 main {
   height: 100vh;
+  opacity: 1;
+  transition: opacity 1s 0.5s;
+}
+
+main.hidden {
+  opacity: 0;
+  transition: opacity 0s;
+}
+
+
+.text-info {
+  position: absolute;
+  top: 0;
+  right: -15%;
+  opacity: 0.4;
+  font-size: 0.4em;
 }

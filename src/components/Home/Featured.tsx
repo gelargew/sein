@@ -23,7 +23,7 @@ const Hero2 = () => {
             </div>
             <a>what we do →</a>
             <section className={styles.ftd_s2}>
-                <h1>FTD S2</h1>
+                <video src='/videos/entanglement-by-robbryantjr.mp4' loop muted autoPlay style={{width: '100%'}} />
             </section>
         </section>
     )

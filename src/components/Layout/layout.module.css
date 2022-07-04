@@ -1,0 +1,162 @@
+.mainLayout {
+    position: fixed;
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+}
+
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #999;
+    z-index: 10;
+
+    opacity: 1;
+
+}
+
+.loading.loading_done {
+
+    opacity: 0;
+    z-index: -10;
+}
+
+/* MENU SECTION */
+
+.menu {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 8;
+    background: #000;
+    box-shadow: 0 0 0 100vh #000;
+    display: grid;
+    grid-template-columns: 40% 1px 40%;
+    place-items: center;
+    gap: 7rem;
+    padding: 0 20vw;
+    color: rgb(218, 218, 218);
+
+    opacity: 1;
+    transition: opacity 1s cubic-bezier(0,1.12,1,.9), transform 1s cubic-bezier(0,1.12,1,.9);
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.menu.menu_hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(100px);
+
+}
+
+.menu_lines {
+    width: 1px;
+    height: 60vh;
+    background: rgba(133, 133, 133, 0.212);
+}
+
+.menu_pageNav {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font_large);
+    gap: 2vw;
+}
+
+.menu_pageNav>a {
+    position: relative;
+    width: fit-content;
+    font-size: var(--font-large);
+}
+
+.menu_infos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.menu_infos p {
+    color: rgb(156, 156, 156);
+}
+
+.menu_address h4 {
+    margin-bottom: 0.5rem;
+}
+
+.menu_miniNav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+.menu_contacts>nav {
+    margin-bottom: 0.5rem;
+    display: flex;
+    gap: 1rem;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+
+
+/* MENU BUTTON */
+
+.menuButton {
+    right: 3%;
+    top: 50%;
+    position: fixed;
+    transform: rotate(-90deg);
+    transition: 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    pointer-events: auto;
+    padding: 10px;
+}
+
+.mb_topLine {
+    background: white;
+    width: 30px;
+    height: 1px;
+    transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    margin-bottom: 7px;
+}
+
+.mb_botLine {
+    position: relative;
+    background: white;
+    width: 30px;
+    height: 1px;
+    transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.menuButton {
+    padding: 20px;
+}
+
+.menuButton:hover .mb_topLine {
+    transform: scaleX(0);
+}
+
+.menuButton:hover .mb_botLine {
+    transform: scaleX(2);
+}
+
+.mb_text {
+    opacity: 0;
+    font-size: 10px;
+    position: absolute;
+    left: -35px;
+    bottom: -6px;
+    transition: 0.5s;
+    padding: 20px;
+}
+
+.menuButton:hover .mb_text {
+    opacity: 0.8;
+    left: -60px;
+}

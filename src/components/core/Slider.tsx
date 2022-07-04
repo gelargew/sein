@@ -21,7 +21,7 @@ export const Slider = ({minX=0, maxX=1000, ...props}: SliderProps) => {
 
 
     return (
-        <a.div  {...bind()} style={{x}} className={props.className} >
+        <a.div  {...bind()} style={{x, touchAction: 'none'}} className={props.className} >
             {props.children}
         </a.div>
     )

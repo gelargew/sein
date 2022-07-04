@@ -1,13 +1,13 @@
 import { Canvas } from "@react-three/fiber";
-import { ScrollControls, Scroll } from "@react-three/drei";
-import { Suspense } from "react";
+import { ScrollControls, Scroll, useProgress } from "@react-three/drei";
+import { Suspense, useEffect } from "react";
 import Main from "./Main";
 import Background from "./Background";
 import Footer from "../Home/Footer";
 
 
-export default function WorksPage() {
 
+export default function WorksPage() {
 
 
     return (
@@ -25,6 +25,8 @@ export default function WorksPage() {
                     <Background />
         
                 </ScrollControls>
+
+
             </Suspense>
         </Canvas>
     )

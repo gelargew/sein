@@ -57,7 +57,7 @@ const itemData = [
     {
         title: 'Quaternion',
         description: 'Quaternions are used in pure mathematics, but also have practical uses in applied mathematics, particularly for calculations involving three-dimensional rotations',
-        imgURL: '/images/cloudman.jpg'
+        imgURL: '/images/desk2.webp'
 
     },
     {
@@ -68,7 +68,7 @@ const itemData = [
     {
         title: 'Frustum',
         description: "Frustums are used to determine what is inside the camera's field of view",
-        imgURL: '/images/paper.webp'
+        imgURL: '/images/cloudman.jpg'
     }
 ]
 

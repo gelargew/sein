@@ -4,10 +4,9 @@ import { a, config, useSpring } from 'react-spring'
 import styles from './styles/main.module.css'
 
 export default function Main() {
-    const scrollData = useScroll()
 
     return (
-        <div className={styles.main} onClick={() => console.log(scrollData.offset, scrollData.pages)} >
+        <div className={styles.main} >
             <section className={styles.header}>
                 <div className={styles.header_content}>
                     <h1>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.</h1>

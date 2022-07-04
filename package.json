@@ -13,6 +13,7 @@
     "@react-three/fiber": "^8.0.27",
     "@types/three": "^0.141.0",
     "@use-gesture/react": "^10.2.16",
+    "jotai": "^1.7.3",
     "next": "12.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
