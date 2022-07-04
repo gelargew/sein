@@ -1,13 +1,15 @@
 import { useAtom } from 'jotai'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useEffect, useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { isLoadingPage, isMenuActive, LoadingEffect } from '../../store'
 import styles from './layout.module.css'
 import Pointer from './Pointer'
 
 export default function Layout(props: JSX.IntrinsicElements['div']) {
     const [,toggleMenu] = useAtom(isMenuActive)
-    const [isLoading, setIsLoading] = useAtom(isLoadingPage)
+    const [, setIsLoading] = useAtom(isLoadingPage)
+
 
     useEffect(() => {
         setIsLoading(false)
@@ -19,6 +21,7 @@ export default function Layout(props: JSX.IntrinsicElements['div']) {
             <Pointer />
             <div className={styles.mainLayout} >
                 <MenuButton className={styles.menuButton} onClick={() => toggleMenu(prev => !prev)} />
+                <TopNav />
             </div>
             <Menu />
             {props.children}
@@ -29,9 +32,28 @@ export default function Layout(props: JSX.IntrinsicElements['div']) {
 
 
 
+const TopNav = () => {
+    const [isHidden, setIsHidden] = useState(false)
+    const onwheel = (e: WheelEvent) => {
+        if (e.deltaY > 0) setIsHidden(true)
+        else setIsHidden(false)
+    }
+
+    useEffect(() => {
+        window.addEventListener('wheel', onwheel)
+        return () => {window.removeEventListener('wheel', onwheel)}
+    }, [])
+
+    return (
+        <nav className={isHidden ? `${styles.nav_main} hidden` : `${styles.nav_main}`} >
+            <Link href={'/'}  ><h2>sein.</h2></Link>
+            <Link href='/works' >WORKS</Link>
+        </nav>
+    )
+}
+
 const MenuButton = (props: JSX.IntrinsicElements['button']) => {
     
-
     return (
         <button {...props} >
             <div className={styles.mb_topLine} />

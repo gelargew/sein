@@ -32,7 +32,7 @@ const TheHero = () => {
                         <div>Collective for </div>
                         <div>Creative space</div>
                     </h1>
-                    <small className={styles.heroSectionFooter}>/ serving bala bala</small>
+                    <small className={styles.heroSectionFooter}>/ SCROLL DOWN</small>
                 </a.section>
 
                 <a.section className={styles.heroSection}>
